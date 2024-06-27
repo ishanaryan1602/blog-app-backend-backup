@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <%- include('partials/head') %>
+  </head>
+  <body>
+    <%- include('partials/nav') %>
+
+    <div class="container alert text-center">Welcome to homepage</div>
+    <div class="container alert text-center">
+      <% if (locals.user) { %>
+      <small class="alert alert-danger"><%= JSON.stringify(user) %></small>
+      <% } else { %>
+      <h1 class="alert">User not identified</h1>
+      <% } %>
+    </div>
+    <%- include('partials/script') %>
+  </body>
+</html>

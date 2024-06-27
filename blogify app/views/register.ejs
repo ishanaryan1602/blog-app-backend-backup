@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <%- include('partials/head') %>
+  </head>
+  <body>
+    <%- include('partials/nav') %>
+
+    <div class="container mt-5">
+      <h1 class="mb-3">Register your account</h1>
+      <form action="/users/register" method="post">
+        <div class="form-group mb-4">
+          <label for="exampleInputEmail1">Username</label>
+          <input
+            type="text"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            name="username"
+          />
+        </div>
+        <div class="form-group mb-4">
+          <label for="exampleInputPassword1">Email Address</label>
+          <input
+            type="email"
+            class="form-control"
+            id="exampleInputPassword1"
+            name="email"
+          />
+        </div>
+        <div class="form-group mb-2">
+          <label for="exampleInputEmail1">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            name="password"
+          />
+        </div>
+        <button type="submit" class="btn btn-primary mt-3">Submit</button>
+      </form>
+    </div>
+
+    <%- include('partials/retLogin') %> <%- include('partials/script') %>
+  </body>
+</html>
